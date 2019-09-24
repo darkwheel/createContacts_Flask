@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>Flask App</title>
+		<style type="text/css">
+			* {
+				font-family: sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>ContactCreator</h1>
+		<form method="post" id="form">
+			<label for="apikey">Enter API Key: </label>
+			<input type="text" id="apikey" name="apinumber" autofocus autocomplete="off">
+		</form>
+		<form method="post" id="form1">
+			<label for="apikey1">Enter search query: </label>
+			<input type="text" id="apikey1" name="apinumber1" autofocus autocomplete="off">
+			<button>Send</button>
+		</form>
+		<p id="square"></p>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			$('#form1').on('submit', function(e){
+				var number = $('#apikey').val();
+				var number2 = $('#apikey1').val();
+				e.preventDefault();
+				$.ajax({
+					url: 'http://127.0.0.1:5000/apikey1/',
+					data: {'apinumber': number,'apinumber1':number2},
+					method: 'POST',
+					success: function(data) {
+						$('#apikey').val('');
+						$('#square').html('You created ' + data['cardName'] + ' with search query ' + number2)
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
