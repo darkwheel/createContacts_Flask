@@ -1,12 +1,7 @@
 import googlemaps
-from GoogleMapsAPIKey import getMyAPIKey
 from CardCreator import CardCreator
 from AddressExtractor import AddressExtractor
 from AddressExtractor import DetailExtractor
-
-
-# Define API KEy
-# apiKey = getMyAPIKey()
 
 def GoogleAccesser(apiKey, userInput):
     # Define our client
