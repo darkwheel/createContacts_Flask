@@ -27,7 +27,7 @@
 				var number2 = $('#apikey1').val();
 				e.preventDefault();
 				$.ajax({
-					url: 'http://127.0.0.1:5000/apikey1/',
+					url: 'https://contactcreator.herokuapp.com/apikey1/',
 					data: {'apinumber': number,'apinumber1':number2},
 					method: 'POST',
 					success: function(data) {
