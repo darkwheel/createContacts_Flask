@@ -1,10 +1,4 @@
-# pip install googlemaps
-# pip install prettyprint
-
-import vobject
 import googlemaps
-import pprint
-import time
 from GoogleMapsAPIKey import getMyAPIKey
 from CardCreator import CardCreator
 from AddressExtractor import AddressExtractor
