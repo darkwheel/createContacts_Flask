@@ -21,5 +21,5 @@ def CardCreator(company, phoneNumber, street, city, region, code, country, websi
     file.write(("item2.URL;type=pref:" + str(website) + "\n").encode("utf-8"))
     file.write("item2.X-ABLabel:_$!<HomePage>!$_\nX-ABShowAs:COMPANY\nEND:VCARD\n".encode("utf-8"))
     
-    S3 = tinys3.Connection(access_key,secret_key,tls=True)
-    S3.upload(str(company) + '.vcf',file,'contactcreator')
+    S3 = tinys3.Connection(AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY,tls=True)
+    S3.upload(str(company) + '.vcf',file,S3_BUCKET)
