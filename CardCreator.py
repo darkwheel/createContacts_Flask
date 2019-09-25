@@ -1,5 +1,6 @@
 import pprint
 from flask import send_file
+import tinys3
 
 def CardCreator(company, phoneNumber, street, city, region, code, country, website, note):
     file = tempfile.TemporaryFile("w+b")
