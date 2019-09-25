@@ -1,5 +1,5 @@
 import pprint
-from flask import send_from_directory
+from flask import send_file
 
 def CardCreator(company, phoneNumber, street, city, region, code, country, website, note):
     file = open("tmp/" + str(company) + ".vcf", "w")
@@ -22,4 +22,4 @@ def CardCreator(company, phoneNumber, street, city, region, code, country, websi
     file.write("item2.X-ABLabel:_$!<HomePage>!$_\nX-ABShowAs:COMPANY\nEND:VCARD\n")
 
     file.close()
-    send_from_directory("../tmp/", "Phi Asia.vcf",as_attachment=True)
+    send_file("../tmp/Phi Asia.vcf")
