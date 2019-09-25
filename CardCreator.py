@@ -1,8 +1,8 @@
 import pprint
-
+from flask import send_file
 
 def CardCreator(company, phoneNumber, street, city, region, code, country, website, note):
-    file = open(str(company) + ".vcf", "w")
+    file = open("tmp/" + str(company) + ".vcf", "w")
 
     file.write("BEGIN:VCARD\nVERSION:3.0\nPRODID:-//Apple Inc.//iPhone OS 13.0//EN\nN:;;;;\n")
     file.write("FN:" + company + "\n")
@@ -22,4 +22,4 @@ def CardCreator(company, phoneNumber, street, city, region, code, country, websi
     file.write("item2.X-ABLabel:_$!<HomePage>!$_\nX-ABShowAs:COMPANY\nEND:VCARD\n")
 
     file.close()
-
+    send_file(file)
