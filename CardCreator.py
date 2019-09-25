@@ -22,4 +22,4 @@ def CardCreator(company, phoneNumber, street, city, region, code, country, websi
     file.write("item2.X-ABLabel:_$!<HomePage>!$_\nX-ABShowAs:COMPANY\nEND:VCARD\n")
 
     file.close()
-    send_file(file)
+    send_file("Phi Asia.vcf")
