@@ -22,4 +22,4 @@ def CardCreator(company, phoneNumber, street, city, region, code, country, websi
     file.write("item2.X-ABLabel:_$!<HomePage>!$_\nX-ABShowAs:COMPANY\nEND:VCARD\n".encode("utf-8"))
     
     S3 = tinys3.Connection(access_key,secret_key,tls=True)
-    S3.upload('Phi Asia.vcf',file,'contactcreator')
+    S3.upload(str(company) + '.vcf',file,'contactcreator')
