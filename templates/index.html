@@ -32,7 +32,7 @@
 					method: 'POST',
 					success: function(data) {
 						$('#apikey').val('');
-						$('#square').html(data['cardName']);
+						$('#square').html("Successfully created. Download should start immediately!");
 						location.href = data['cardName'];
 					}
 				});
