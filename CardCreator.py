@@ -1,7 +1,7 @@
 import tempfile
 import boto3
 import botocore
-import webbrowser
+import urllib
 from botocore.client import Config
 import os
 
@@ -37,5 +37,5 @@ def CardCreator(company, phoneNumber, street, city, region, code, country, websi
 
     s3.Bucket(bucket).put_object(Key=key, Body=file)
     objectUrl = s3_client.generate_presigned_url(ClientMethod='get_object',Params={'Bucket': bucket,'Key': key})
-    response = webbrowser.open(str(objectUrl),new=2,autoraise=1)
+    response = urllib.request.urlretrieve(str(objectUrl))
     print(response)
