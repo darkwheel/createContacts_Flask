@@ -18,7 +18,7 @@ def GoogleAccesser(apiKey, userInput):
     splitAddress = AddressExtractor(address)
     details = DetailExtractor(detailInformation)
 
-    CardCreator(name, details[0], splitAddress[0], splitAddress[1], splitAddress[2], splitAddress[3],
+    fileLink = CardCreator(name, details[0], splitAddress[0], splitAddress[1], splitAddress[2], splitAddress[3],
                 splitAddress[4], details[1], details[2])
     # return name of vCard
-    return name
+    return fileLink
