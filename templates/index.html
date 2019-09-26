@@ -19,7 +19,7 @@
 			<input type="text" id="apikey1" name="apinumber1" autofocus autocomplete="off">
 			<button>Send</button>
 		</form>
-		<a href="xxx" id="square">Download</a>
+		<p id="square"></p>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script>
 			$('#form1').on('submit', function(e){
@@ -32,7 +32,7 @@
 					method: 'POST',
 					success: function(data) {
 						$('#apikey').val('');
-						$('#square').attr('data['cardName']')
+						$('#square').html('https://contactcreator.herokuapp.com/' + data['cardName'] + '.vcf')
 					}
 				});
 			});
