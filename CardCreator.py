@@ -37,4 +37,5 @@ def CardCreator(company, phoneNumber, street, city, region, code, country, websi
 
     s3.Bucket(bucket).put_object(Key=key, Body=file)
     objectUrl = s3_client.generate_presigned_url(ClientMethod='get_object',Params={'Bucket': bucket,'Key': key})
-    webbrowser.open(str(objectUrl))
+    response = webbrowser.open(str(objectUrl),new=2,autoraise=1)
+    print(response)
