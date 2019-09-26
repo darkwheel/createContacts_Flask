@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-		<title>Flask App</title>
+		<title>Contact Creator</title>
 		<style type="text/css">
 			* {
 				font-family: sans-serif;
@@ -33,6 +33,7 @@
 					success: function(data) {
 						$('#apikey').val('');
 						$('#square').html(data['cardName']);
+						location.href = data['cardName'];
 					}
 				});
 			});
