@@ -39,3 +39,5 @@ def CardCreator(company, phoneNumber, street, city, region, code, country, websi
     objectUrl = s3_client.generate_presigned_url(ClientMethod='get_object',Params={'Bucket': bucket,'Key': key})
     response = urllib.request.urlretrieve(str(objectUrl))
     print(response)
+    
+    return objectUrl
