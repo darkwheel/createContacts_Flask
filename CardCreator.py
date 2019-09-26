@@ -6,8 +6,10 @@ from botocore.client import Config
 import os
 
 def CardCreator(company, phoneNumber, street, city, region, code, country, website, note):
+    
     access_key = os.environ['S3_KEY']
     secret_key = os.environ['S3_SECRET']
+    regionS3 = "eu-central-1"
     key = str(company) + '.vcf'
     bucket = os.environ['S3_BUCKET']
     file = tempfile.TemporaryFile("w+b")
