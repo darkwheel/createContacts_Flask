@@ -2,24 +2,32 @@
 <html lang='en'>
 	<head>
 		<title>Contact Creator</title>
-        <link rel="stylesheet" type="text/css" href="indexStyle.css">
+        <link rel="stylesheet" type="text/css" href= "indexStyle.css">
 	</head>
 	<body>
-        background-image:url('../images/background.jpg');
-        background-attachment:fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-		<h1>ContactCreator</h1>
-		<form method="post" id="form">
-			<label for="apikey">Enter API Key: </label>
+        <br>
+        <div id="divForm">
+		<form method="post" id="form" align="center">
+			<label for="apikey">Enter Google API Key: </label>
+            <br>
+            <br>
 			<input type="text" id="apikey" name="apinumber" autofocus autocomplete="off">
+
 		</form>
-		<form method="post" id="form1">
+		<form method="post" id="form1" align="center">
+            <br>
 			<label for="apikey1">Enter search query: </label>
+            <br>
+            <br>
 			<input type="text" id="apikey1" name="apinumber1" autofocus autocomplete="off">
-			<button>Send</button>
+            <br>
+            <br>
+			<button class='myButton'>Send</button>
+            <br>
 		</form>
 		<p id="square"></p>
+        <p align="center">ContactCreator by Christoph Raidl</p>
+        </div>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script>
 			$('#form1').on('submit', function(e){
