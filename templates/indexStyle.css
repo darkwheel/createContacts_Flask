@@ -64,7 +64,6 @@ h1{
 input{
 
   padding-left: 50px;
-  padding:3px;
 }
 
 .button-blue{ @include buttonize(199, 71, 89);}
