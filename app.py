@@ -4,7 +4,7 @@ from GoogleAccesser import GoogleAccesser
 from functools import wraps
 
 from dotenv import load_dotenv, find_dotenv
-from os import environ
+import os
 from werkzeug.exceptions import HTTPException
 from flask import session
 from flask import url_for
