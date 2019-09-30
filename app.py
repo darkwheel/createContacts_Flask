@@ -3,13 +3,12 @@ import json
 from GoogleAccesser import GoogleAccesser
 from functools import wraps
 
-from os import environ as env
+from os import environ
 from werkzeug.exceptions import HTTPException
 from flask import session
 from flask import url_for
 from authlib.flask.client import OAuth
 from six.moves.urllib.parse import urlencode
-import os
 
 ENV_FILE = find_dotenv()
 if ENV_FILE:
