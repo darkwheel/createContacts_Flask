@@ -23,6 +23,7 @@ AUTH0_BASE_URL = 'https://' + AUTH0_DOMAIN
 AUTH0_AUDIENCE = ""
 if AUTH0_AUDIENCE is '':
     AUTH0_AUDIENCE = AUTH0_BASE_URL + '/userinfo'
+GOOGLE_API_KEY = os.environ['GOOGLE_API_KEY']
 
 app = Flask(__name__, template_folder="templates/")
 app.secret_key = "secretvery"
@@ -106,7 +107,7 @@ def square():
 
 @app.route('/apikey1/', methods=['POST'])
 def apikey1():
-    apiKey = str(request.form.get('apinumber', 0))
+    apiKey = GOOGLE_API_KEY
     searchQuery = str(request.form.get('apinumber1', 0))
     print(apiKey)
     print(searchQuery)
