@@ -96,6 +96,7 @@ def logout():
 def index():
     return render_template('index.html')
 
+#TestCode Routing
 @app.route('/square/', methods=['POST'])
 def square():
     num = float(request.form.get('number', 0))
